@@ -1,0 +1,35 @@
+---
+title: "tutorials for using map of accidents"
+author: "Nguyen Tuong Quang"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ac_tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r echo = FALSE}
+library(Qaccidentmap)
+```
+
+## Aims of the package:
+This package help you to map plot accidents rely to locations where accidents occured. Data for map are from [the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System](https://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)).
+
+## Accessing the package:
+```{r eval = FALSE}
+library(devtools)
+install_github("mrntq/Qaccidentmap")
+library(Qaccidentmap)
+```
+
+## How to use:
+- First, dowload data from [the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System](https://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)).
+- Second, choose year and state number to map plot by function fars_map_state.
+For example: fars_map_state(5, 2013)
